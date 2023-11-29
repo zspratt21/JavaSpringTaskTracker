@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/tasks")
+@RequestMapping("/api/Tasks")
 public class TaskController {
 
     @Autowired
