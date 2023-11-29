@@ -1,12 +1,13 @@
 package com.example.app.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/")
 public class WelcomeController {
     @GetMapping
     public String welcome() {
-        return "Welcome to my Spring Oracle DB CRUD API Template. What will you build with it?";
+        return "welcome";
     }
 }

@@ -1,12 +1,6 @@
-# Java SpringBoot API Template
+# Java Spring Task Tracker
 
-This is a template project for a Java Spring Boot CRUD API that uses OracleDB as a database.
-
-## Features
-
-- [x] Dockerized OracleDB Database instance.
-- [x] [Spring Boot & Devtools for hot reloading](https://spring.io/projects/spring-boot)
-- [x] Unit tests 
+An API for tracking tasks, built using Java and the Spring Boot web framework.
 
 ## Getting Started
 
@@ -18,7 +12,11 @@ This is a template project for a Java Spring Boot CRUD API that uses OracleDB as
 
 ### Installing
 
-Clone the repository or start a new project with this template.
+Clone the repository
+
+```bash
+git clone https://github.com/zspratt21/JavaSpringTaskTracker
+```
 
 Copy the .env.example file to .env and modify the values as needed.
 
@@ -45,12 +43,29 @@ Then start the application with
 ```
 ./gradlew bootRun
 ```
-### Using the example colors crud api
 
-The example api is a simple CRUD api for colors. It has the following endpoints:
+Use an API client such as ARC or Postman, to make requests to the API. By default, the API is hosted at http://localhost:8085. The following endpoints are available:
+#### GET /api/Tasks
+Returns a list of all tasks.
+#### GET /api/Tasks/{id}
+Returns a single task with the specified id.
+#### POST /api/Tasks
+Creates a new task. The request body should contain a JSON object with the following properties:
+- name (string)
+- isCompleted (bool)
+#### PUT /api/Tasks/{id}
+Updates an existing task with the specified id. The request body should contain a JSON object with the following properties:
+- id (int)
+- name (string)
+- isCompleted (bool)
+#### DELETE /api/Tasks/{id}
+Deletes an existing task with the specified id.
 
-- GET /colors - Returns all colors
-- GET /colors/:id - Returns a color by id
-- POST /colors - Creates a new color
-- PUT /colors/:id - Updates a color by id (id in json body needs to match id in url)
-- DELETE /colors/:id - Deletes a color by id
+## Made With
+- [Java 21](https://openjdk.java.net/projects/jdk/21/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Mustache](https://mustache.github.io/)
+- [Oracle Database](https://www.oracle.com/database/)
+- [Docker](https://www.docker.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Intelij IDEA](https://www.jetbrains.com/idea/)
